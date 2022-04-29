@@ -1,0 +1,7 @@
+@import "../utilities/mixins";
+    .galeria{
+        margin: 0;
+        padding: 0;
+        width: auto;
+       @include flex;
+}

@@ -1,3 +1,93 @@
+/*
+//medias queries
+@media (max-width: $smartphone+20) {
+    font-size: 22px;
+    color: black;
+}
+
+@media (min-width: $tablets+10) {
+    font-size: 22px; 
+    color:yellow;
+}
+@media (max-width:$desktop+5) {
+    font-size: 20px;
+    color: green
+ 
+}*/
+.cont {
+  margin: 0;
+  padding: 0;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+/*
+//medias queries
+@media (max-width: $smartphone+20) {
+    font-size: 22px;
+    color: black;
+}
+
+@media (min-width: $tablets+10) {
+    font-size: 22px; 
+    color:yellow;
+}
+@media (max-width:$desktop+5) {
+    font-size: 20px;
+    color: green
+ 
+}*/
+.galeria {
+  margin: 0;
+  padding: 0;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+/*
+//medias queries
+@media (max-width: $smartphone+20) {
+    font-size: 22px;
+    color: black;
+}
+
+@media (min-width: $tablets+10) {
+    font-size: 22px; 
+    color:yellow;
+}
+@media (max-width:$desktop+5) {
+    font-size: 20px;
+    color: green
+ 
+}*/
+.prod {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+/*
+//medias queries
+@media (max-width: $smartphone+20) {
+    font-size: 22px;
+    color: black;
+}
+
+@media (min-width: $tablets+10) {
+    font-size: 22px; 
+    color:yellow;
+}
+@media (max-width:$desktop+5) {
+    font-size: 20px;
+    color: green
+ 
+}*/
+.nos {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
 body {
   background-color: #E878EB;
   padding: 0;
@@ -30,6 +120,9 @@ header {
     header nav ul li {
       align-items: center;
       font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; }
+      header nav ul li:hover {
+        background-color: aliceblue;
+        border-radius: 1rem; }
     header nav ul a {
       display: flex;
       text-decoration: none;
@@ -40,10 +133,33 @@ main {
   display: flex;
   margin: 0;
   padding: 0;
-  width: 90%;
+  width: auto;
   flex-direction: row-reverse;
   align-items: center; }
   main .principio {
     display: grid;
     grid-template-areas: "descripcion" "cierre" "img" "video";
     justify-content: center; }
+  main .img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 500px; }
+    main .img .vide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: auto; }
+
+footer p {
+  font-size: 1.3rem; }
+
+footer p {
+  text-align: center;
+  background-color: #e45fe4; }
+
+footer .redes {
+  display: flex;
+  justify-content: center;
+  font-size: 30px; }

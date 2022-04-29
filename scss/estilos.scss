@@ -1,4 +1,11 @@
 @import "utilities/variables";
+@import "layout/contacto";
+@import "layout/galeria";
+@import "layout/productos";
+@import "layout/sobrenosotros";
+
+
+
 
 body{
     background-color: $color-principal;
@@ -35,36 +42,65 @@ body{
          justify-content: space-around;
          margin: 1rem;
          padding: 1rem;
-          li{
+         li{
             align-items: center;
-            
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-                   
-                }
+            &:hover {
+                background-color: aliceblue;
+                border-radius: 1rem;
+               }
+            }
+                
                 a{
                     display: flex;
                     text-decoration: none;
                     color: $color-quinto;
                     font-size: 1.3rem;
+                    
                 }
-            }
-        } 
-    }
-   main{
+            }  
+        }
+    } 
+    
+   
+    main{
     display: flex;
     margin: 0;
     padding: 0;
-    width: 90%;
+    width: auto;
     flex-direction: row-reverse;
     align-items: center;
-    .principio{
-        display: grid;
-        grid-template-areas: "descripcion"
+       .principio{
+          display: grid;
+          grid-template-areas: "descripcion"
                               "cierre"
                               "img"
                               "video";
-        justify-content: center;   
-    }      
-
- }
- 
+          justify-content: center;  
+        
+        } 
+            .img{
+              @include flex-dos;
+              width: 500px;
+              .vide{
+                @include flex-dos;
+                
+               }
+             }  
+            
+             
+    }
+    footer{
+         p{
+            font-size: 1.3rem;
+        }
+        p{
+            text-align: center;
+            background-color: $color-secundario;
+      }
+            .redes{
+             display: flex;
+             justify-content: center;
+             font-size: 30px;}
+    } 
+   

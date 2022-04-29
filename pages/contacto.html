@@ -23,9 +23,12 @@
 <body>
 
     <header>
-        <h1 class="indexTitulo">
-            <a href="../index.html" class="">CyV Fitnnes</a>
-        </h1>
+        <div class="container">
+            <h1 class="row indexTitulo">
+                <img class="col-6 cora " src="../imag/WhatsApp Image 2022-03-21 at 21.35.37.jpg" alt="#">
+                <a href="../index.html" class="col-6">CyV Fitnnes</a>
+            </h1>
+        </div>
   <!--menu-->  
 
             <nav>
@@ -59,7 +62,7 @@
             </nav>
    </header>
     
-<main>
+<main class="container cont">
         <h2>Contacto</h2> 
    
         <h3 class="conta mb-3">Te podes contactar con nosotros ante cualquier duda</h3>
@@ -95,54 +98,65 @@
                     </div>
                 </div>
                 </div>
-                <div class="col-md-6">
-                <label for="validationCustom03" class="form-label">ciudad</label>
-                <input type="text" class="form-control" id="validationCustom03" required>
-                <div class="invalid-feedback">
-                    Please provide a valid city.
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="validationCustom03" class="form-label">ciudad</label>
+                        <input type="text" class="form-control" id="validationCustom03" required>
+                        <div class="invalid-feedback">
+                            Please provide a valid city.
+                        </div>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="validationCustom04" class="form-label">pais</label>
+                            <select class="form-select" id="validationCustom04" required>
+                                    <option selected disabled value=""></option>
+                                    <option>Argentina</option>
+                                    <option selected disabled value=""></option>
+                                    <option>brasil</option>
+                                    <option selected disabled value=""></option>
+                                    <option>uruguay</option>
+                                    <option selected disabled value=""></option>
+                                    <option>paraguay</option>
+                                    <option selected disabled value=""></option>
+                                    <option>chile</option>
+                                    <option selected disabled value=""></option>
+                                    <option>bolivia</option>
+                           </select>
+                        <div class="invalid-feedback">
+                            Please select a valid state.
+                        </div>
+                        </div>
+                        <div class="col-md-3">
+                              <label for="validationCustom05" class="form-label">telefono</label>
+                              <input type="text" class="form-control" id="validationCustom05" required>
+                            <div class="invalid-feedback">
+                            Please provide a valid zip.
+                            </div>
+                        </div>
                 </div>
+               
+                
+               
+                <div class="row">
+                    <div class="col-12">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                            <label class="form-check-label" for="invalidCheck">
+                            Agree to terms and conditions
+                            </label>
+                            <div class="invalid-feedback">
+                            You must agree before submitting.
+                            </div>
+                        </div>
+                        </div>
                 </div>
-                <div class="col-md-3">
-                <label for="validationCustom04" class="form-label">pais</label>
-                <select class="form-select" id="validationCustom04" required>
-                    <option selected disabled value=""></option>
-                    <option>Argentina</option>
-                    <option selected disabled value=""></option>
-                    <option>brasil</option>
-                    <option selected disabled value=""></option>
-                    <option>uruguay</option>
-                    <option selected disabled value=""></option>
-                    <option>paraguay</option>
-                    <option selected disabled value=""></option>
-                    <option>chile</option>
-                    <option selected disabled value=""></option>
-                    <option>bolivia</option>
-                </select>
-                <div class="invalid-feedback">
-                    Please select a valid state.
-                </div>
-                </div>
-                <div class="col-md-3">
-                <label for="validationCustom05" class="form-label">telefono</label>
-                <input type="text" class="form-control" id="validationCustom05" required>
-                <div class="invalid-feedback">
-                    Please provide a valid zip.
-                </div>
-                </div>
-                <div class="col-12">
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                    <label class="form-check-label" for="invalidCheck">
-                    Agree to terms and conditions
-                    </label>
-                    <div class="invalid-feedback">
-                    You must agree before submitting.
+               
+                <div class="row">
+                    <div class="col-12">
+                        <button class="btn btn-primary" type="submit">enviar</button>
                     </div>
                 </div>
-                </div>
-                <div class="col-12">
-                <button class="btn btn-primary" type="submit">enviar</button>
-                </div>
+               
             </form>
 
            <!--link de gps-->
