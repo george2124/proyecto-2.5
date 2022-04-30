@@ -1,0 +1,29 @@
+@import "variables";
+
+@mixin flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@mixin flex-dos{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+}
+/*
+//medias queries
+@media (max-width: $smartphone+20) {
+    font-size: 22px;
+    color: black;
+}
+
+@media (min-width: $tablets+10) {
+    font-size: 22px; 
+    color:yellow;
+}
+@media (max-width:$desktop+5) {
+    font-size: 20px;
+    color: green
+ 
+}*/

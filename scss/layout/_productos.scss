@@ -1,0 +1,5 @@
+@import "../utilities/mixins";
+
+   .prod{
+      @include flex;
+}
