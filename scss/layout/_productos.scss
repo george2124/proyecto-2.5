@@ -1,5 +1,14 @@
 @import "../utilities/mixins";
 
+
    .prod{
       @include flex;
+      p{
+         font-size: 1.2rem;
+         
+      }
+      .card{
+         color: $color-principal;
+      }
+     
 }

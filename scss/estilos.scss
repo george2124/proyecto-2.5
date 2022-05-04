@@ -70,6 +70,7 @@ body{
     width: auto;
     flex-direction: row-reverse;
     align-items: center;
+    color: $color-quinto;
        .principio{
           display: grid;
           grid-template-areas: "descripcion"
@@ -91,6 +92,14 @@ body{
              
     }
     footer{
+         div{
+             div{
+                 a{
+                     color:$color-sexto;
+                     padding: 1px;
+                 }
+             }
+         }
          p{
             font-size: 1.3rem;
         }
@@ -102,5 +111,6 @@ body{
              display: flex;
              justify-content: center;
              font-size: 30px;}
+            
     } 
    
