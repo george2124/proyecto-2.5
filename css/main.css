@@ -130,7 +130,7 @@ header {
     header nav ul a {
       display: flex;
       text-decoration: none;
-      color: #e9e3e3;
+      color: white;
       font-size: 1.3rem; }
 
 main {
@@ -157,18 +157,17 @@ main {
       align-items: center;
       height: auto; }
 
-footer div div a {
-  color: #286DA8;
-  padding: 1px; }
-
-footer p {
-  font-size: 1.3rem; }
-
-footer p {
-  text-align: center;
-  background-color: #438496; }
-
-footer .redes {
-  display: flex;
-  justify-content: center;
-  font-size: 30px; }
+footer {
+  padding: 1.2rem; }
+  footer div div a {
+    color: #286DA8;
+    padding: 1px; }
+  footer p {
+    font-size: 1.3rem; }
+  footer p {
+    text-align: center;
+    background-color: #438496; }
+  footer .redes {
+    display: flex;
+    justify-content: center;
+    font-size: 30px; }
