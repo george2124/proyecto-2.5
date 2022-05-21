@@ -78,6 +78,9 @@ header {
       header nav ul {
         grid-template-columns: 1fr;
         gap: 0 em; } }
+    @media (max-width: 640px) {
+      header nav ul {
+        list-style: disc; } }
     @media (min-width: 1024px) and (max-width: 1360px) {
       header nav ul {
         font-size: 2rem; } }

@@ -49,9 +49,13 @@ body{
          justify-items: center;
          @include grid-dos(5, 0em);
          list-style: none;
+         @include media(xs){
+             list-style: disc;
+         }
          @include media(md){
              font-size: 2rem;
          }
+
          li{
             align-items: center;
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
