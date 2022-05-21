@@ -132,6 +132,12 @@ body{
          div{
              .tituloDeRedes{
                  color: $color-quinto;
+                 @include media(xs){
+                     font-size: 1.3rem;
+                 }
+                 @include media(md){
+                     font-size: 1.5rem;
+                 }
              }
              div{
                  a{

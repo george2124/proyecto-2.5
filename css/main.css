@@ -133,6 +133,12 @@ header {
 
 footer div .tituloDeRedes {
   color: #e9e3e3; }
+  @media (max-width: 640px) {
+    footer div .tituloDeRedes {
+      font-size: 1.3rem; } }
+  @media (min-width: 1024px) and (max-width: 1360px) {
+    footer div .tituloDeRedes {
+      font-size: 1.5rem; } }
 
 footer div div a {
   color: #286DA8;
