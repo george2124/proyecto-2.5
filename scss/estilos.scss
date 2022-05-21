@@ -124,8 +124,11 @@ body{
     }
     
   
-    footer{
+    footer{ 
          div{
+             .tituloDeRedes{
+                 color: $color-quinto;
+             }
              div{
                  a{
                      color:$color-sexto;
@@ -143,9 +146,13 @@ body{
             .redes{
              display: flex;
              justify-content: center;
-             font-size: 30px;
+             font-size: 2rem;
+             flex-direction: column-reverse;
+             align-items: center;
+             @include media(md){
+                font-size: 2.3rem;
             }
-     
+      }
       
      }
             

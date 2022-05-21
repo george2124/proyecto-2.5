@@ -128,6 +128,9 @@ header {
       .principio img {
         width: 80%; } }
 
+footer div .tituloDeRedes {
+  color: #e9e3e3; }
+
 footer div div a {
   color: #286DA8;
   padding: 1px; }
@@ -142,4 +145,9 @@ footer p {
 footer .redes {
   display: flex;
   justify-content: center;
-  font-size: 30px; }
+  font-size: 2rem;
+  flex-direction: column-reverse;
+  align-items: center; }
+  @media (min-width: 1024px) and (max-width: 1360px) {
+    footer .redes {
+      font-size: 2.3rem; } }
