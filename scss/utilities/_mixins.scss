@@ -11,19 +11,63 @@
             align-items: center;
             height: auto;
 }
-/*
-//medias queries
-@media (max-width: $smartphone+20) {
-    font-size: 22px;
-    color: black;
+
+@mixin flex-tre{
+    margin: auto;
+    padding: 30px;
+    flex-direction: row-reverse;
+    align-items: center;
+    color: $color-quinto;
 }
 
-@media (min-width: $tablets+10) {
-    font-size: 22px; 
-    color:yellow;
+//responsitive
+$breakpoint-xs: 480px;
+$breakpoint-sm: 640px;
+$breakpoint-md: 1024px;
+$breakpoint-lg: 1360px;
+
+@mixin media($media) {
+    @if $media == xs {
+       @media (max-width: $breakpoint-sm) { @content; }
+    }
+    @else if $media == sm {
+        @media (min-width: $breakpoint-sm) and (max-width: $breakpoint-md) { @content; }
+    }
+    @else if $media == md {
+        @media (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) { @content;}
+    }
+    @else if $media == lg{
+        @media (min-width: $breakpoint-lg) { @content;}
+    }
 }
-@media (max-width:$desktop+5) {
-    font-size: 20px;
-    color: green
- 
-}*/
+
+//mixin con grid
+@mixin grid( $columnas , $espacios ) {
+    display                  :grid;
+    grid-template-columns: repeat( $columnas, 1fr );
+    gap: $espacios;
+     @media screen  and (max-width: $breakpoint-xs) {
+        grid-template-columns: 1fr;
+        gap: 0 em;
+    }
+} 
+
+@mixin grid-dos( $columnas , $espacios ) {
+    display                  :grid;
+    grid-template-columns: repeat( $columnas, 1fr );
+    gap: $espacios;
+     @media screen  and (max-width: $breakpoint-sm) {
+        grid-template-columns: 1fr;
+        gap: 0 em;
+    }
+} 
+
+@mixin grid-tres( $columnas , $espacios ) {
+    display                  :grid;
+    grid-template-columns: repeat( $columnas, 1fr );
+    gap: $espacios;
+     @media screen  and (max-width: $breakpoint-md) {
+        grid-template-columns: 1fr;
+        gap: 0 em;
+    }
+} 

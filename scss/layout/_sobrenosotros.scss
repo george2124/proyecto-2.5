@@ -1,5 +1,18 @@
      @import "../utilities/mixins";
 
-     .nos{
-         @include flex;
-}
+     main{
+         @include flex-tre;
+         @include media(xs){
+             font-size: 1.2rem;
+         }
+         @include media(sm){
+             font-size: 1.3rem;
+         }
+         @include media(md){
+             font-size: 1.5rem;
+             .listaGeneral{
+                display: flex;
+                justify-content: space-around;
+             }
+         }
+     }

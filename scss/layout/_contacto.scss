@@ -1,8 +1,8 @@
 @import "../utilities/mixins";
 
-.cont{
-    margin: 0;
-    padding: 0;
+.conta{
+    margin: auto;
+    padding: 20px;
     width: auto;
-    @include flex;
-}
+   
+ }
