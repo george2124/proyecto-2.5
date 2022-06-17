@@ -30,7 +30,7 @@ productos.push(new Producto("BotellaDeAgua", 4500));
   
 
   console.log(productos);
-  const item = prompt(); 
+  const item = prompt("Busque su Producto"); 
 
  // productos.includes(productos.Productos)
 
