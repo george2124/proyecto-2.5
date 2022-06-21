@@ -45,12 +45,14 @@
 //agregando productos
 
 const productos = [
-  {id: 1, nombre:"camisa", precio:150},
-  {id: 2, nombre:"pantalon", precio:200},
-  {id: 3, nombre:"gorra", precio:300},
-  {id: 4, nombre:"saco", precio:400},
+  {id: 1, nombre:"Mancuernas", precio:6500},
+  {id: 2, nombre:"Pesas Rusas", precio:9000},
+  {id: 3, nombre:"Guantes", precio:3500},
+  {id: 4, nombre:"Conjunto deportivo de Hombre", precio:14000},
+  {id: 4, nombre:"Conjunto deportivo de Mujer", precio:14900},
+  {id: 4, nombre:"Botella de Agua", precio:4500},
 ];
-let padre = document.getElementsByClassName("produ");
+let padre = document.getElementById("produ");
 
 for(const producto of productos){
   let contenedor = document.createElement("div");
