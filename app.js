@@ -1,32 +1,49 @@
 //lista de productos
-// class Producto{
-//     constructor(nombre, precio) {
-//         this.nombre  = nombre.toUpperCase();
-//         this.precio  = parseFloat(precio);
-//         this.vendido = false;
-//     }
+class Producto{
+    constructor(id, nombre, precio, url) {
+        this.id = id;
+        this.nombre  = nombre;
+        //this.nombre  = nombre.toUpperCase();
+        this.precio  = precio;
+        //this.precio  = parseFloat(precio);
+        this.url = url;
+        this.vendido = false;
+    }
     
-//     sumaIva()  {
-//         this.precio = this.precio * 1.21;
-//     }
-//     vender() {
-//         this.vendido = true;
-//     }
-// }
+    sumaIva()  {
+        this.precio *= 1.21;
+    }
+    vender() {
+        this.vendido = true;
+    }
+}
 
 
-// const productos = [];
-// productos.push(new Producto("Mancuernas", 6500));
-// productos.push(new Producto("PesasRusas", 9000));
-// productos.push(new Producto("Guantes", 3500));
-// productos.push(new Producto("ConjuntoDepontivoH", 10000));
-// productos.push(new Producto("ConjuntoDepontivoM", 12500));
-// productos.push(new Producto("BotellaDeAgua", 4500));
+const productos = [];
 
-//   for(const producto of productos){
-//     producto.sumaIva();
-//     producto.vender();
-//   }
+productos.push(new Producto(1,"Mancuernas", 6500, "https://www.hola.com/imagenes/seleccion/20211020198094/mejores-pesas/1-9-789/pesas-1-a-a.jpg"));
+productos.push(new Producto(2,"Pesas Rusas", 9000,"../imag/pesas rusas.jpg"));
+productos.push(new Producto(3,"Guantes", 3500, "../imag/guantes.jpg"));
+productos.push(new Producto(4,"Conjunto Depontiv Hombre", 10000, "../imag/conjunto.jpg"));
+productos.push(new Producto(5,"Conjunto Depontivo Mujer", 12500, "../imag/conjunto de mujer2.jpg"));
+productos.push(new Producto(6,"Botella De Agua", 4500, "../imag/bottella dde agua (1).jpg"));
+
+let container3 = document.getElementById("container3");
+
+  for(const producto of productos){
+    producto.sumaIva();
+    producto.vender();
+
+    let div = document.createElement("div");
+    div.className = "card"
+    div.innerHTML = `
+                     <img class = "img-card" src="${producto.url}" alt=""> 
+                     <p class= "id-card">Id: ${producto.id}</p> 
+                     <p class = "nombre-card"> ${producto.nombre}</p>
+                     <p class = "precio-card">$ ${producto.precio}</p> 
+                    `;    
+    container3.append(div); 
+  }
   
 
 //   console.log(productos);
@@ -42,36 +59,5 @@
   //   console.log("no se encontro el producto");
   // }
 
-//agregando productos
 
-const productos = [
-  {id: 1, nombre:"Mancuernas", precio:6500},
-  {id: 2, nombre:"Pesas Rusas", precio:9000},
-  {id: 3, nombre:"Guantes", precio:3500},
-  {id: 4, nombre:"Conjunto deportivo de Hombre", precio:14000},
-  {id: 4, nombre:"Conjunto deportivo de Mujer", precio:14900},
-  {id: 4, nombre:"Botella de Agua", precio:4500},
-];
-let padre = document.getElementById("produ");
 
-for(const producto of productos){
-  let contenedor = document.createElement("div");
-  
-  contenedor.innerHTML = `<h2>ID: ${producto.id}</h2> 
-                          <p>Producto: ${producto.nombre}</p>
-                          <b>$ ${producto.precio}</b> `;    
-  padre.append(contenedor);                                          
-}
-
-// let titulo = document.createElement("./pages");
-// let seccion = prompt("ingrese si quieres ver nuestros productos o redes");
-
-// if(seccion === "producto"){
-//   titulo.innerHTML = "./prouctos.html"
-// }else if(seccion === "redes"){
-//     titulo.innerHTML = "./contacto.html"
-// }else{
-//     titulo.innerHTML = "index.html"
-// }
-
-// document.body.append(titulo);
