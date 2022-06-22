@@ -3,6 +3,9 @@
   padding: 20px;
   width: auto; }
 
+form#formulario {
+  padding: 1rem; }
+
 .galeria {
   margin: 0;
   padding: 0;
