@@ -46,6 +46,8 @@ let container3 = document.getElementById("container3");
   }
   
 
+  
+  
 //   console.log(productos);
 //   const item = prompt("Busque su Producto"); 
 
@@ -60,4 +62,20 @@ let container3 = document.getElementById("container3");
   // }
 
 
+
+  //formulario
+  let miformulario = document.getElementById("formulario");
+  miformulario.addEventListener("submit", validarformulario);
+  
+  function validarformulario(e){
+      e.preventDefault();
+      let formulario = e.target
+      console.log(formulario.children[0].value);
+      console.log(formulario.children[1].value);
+      // formulario.children[1].value = "";
+     
+      // if(formulario.children[0].value === "andres"){
+      //     formulario.children[1].value = "";
+      // }
+  }
 
