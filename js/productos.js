@@ -48,13 +48,9 @@ let container3 = document.getElementById("container3");
   let carrito = [];
   let numeroCarrito = document.getElementById("numeroCarrito");
 
-  function comprar(id){
-
-    const producto = productos.find(el => el.id === id);
-    carrito.push(producto);
-    numeroCarrito.innerHTML = carrito.length
-    agregarCarrito(carrito.length - 1)
-    localStorage.setItem("carritoLocal", JSON.stringify(carrito));
+  function comprar(){
+    alert("Su compra se completo")
+    
   }
 
   let carritoDom = document.getElementById("carrito");
@@ -67,8 +63,7 @@ let container3 = document.getElementById("container3");
     carritoDom.innerHTML = ""
   }
 
-  carrito = JSON.parse(localStorage("carritoLocal")) || [];
-  carritoLocalStorage()
+  carrito = JSON.parse(localStorage.getItem("carritoLocal")) || [];
 
   function agregarCarrito(parametro){
      const producto = productos.find(el => el.id === parametro);
@@ -81,8 +76,9 @@ let container3 = document.getElementById("container3");
                 <p>$${producto.precio}</p>
                 <button class="btn-card" onclick = "eliminar(${producto.id})">Eliminar</button>`;
     
-     total.innerHTML = total.innerHTML*1 + producto.precio           
-
+     total.innerHTML = total.innerHTML*1 + producto.precio      
+     carrito.push(producto)     
+     localStorage.setItem("carritoLocal", JSON.stringify(carrito))
   carritoDom.append(div)
 }
 
