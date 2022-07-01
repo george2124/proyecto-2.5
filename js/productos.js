@@ -1,4 +1,4 @@
-//lista de productos
+//Constructor de productos con metodo de sumar iva, producto vendido
 class Producto{
     constructor(id, nombre, precio, url) {
         this.id = id;
@@ -18,6 +18,7 @@ class Producto{
     }
 }
 
+//Array de productos con push
 
 const productos = [];
 
@@ -28,8 +29,10 @@ productos.push(new Producto(4,"Conjunto Depontiv Hombre", 10000, "../imag/conjun
 productos.push(new Producto(5,"Conjunto Depontivo Mujer", 12500, "../imag/conjunto de mujer2.jpg"));
 productos.push(new Producto(6,"Botella De Agua", 4500, "../imag/bottella dde agua (1).jpg"));
 
+//Variable
 let container3 = document.getElementById("container3");
 
+//for of para sumar iva y agregar al dom
   for(const producto of productos){
     producto.sumaIva();
     producto.vender();
@@ -45,26 +48,30 @@ let container3 = document.getElementById("container3");
     container3.append(div); 
   }
   
+  //variable
   let carrito = [];
   let numeroCarrito = document.getElementById("numeroCarrito");
-
+  
+  //funcion comprar con una alert
   function comprar(){
     alert("Su compra se completo")
     
   }
 
+  //Variable
   let carritoDom = document.getElementById("carrito");
-
-
+  
   let total = document.getElementById("total")
   
+  //Funcion de vaciar carrito
   function vaciar(){
     total.innerHTML = "0"
     carritoDom.innerHTML = ""
   }
-
+  //Trae los pructos de localStorage 
   carrito = JSON.parse(localStorage.getItem("carritoLocal")) || [];
 
+  //Agrega los prouctos al carrito y los renderiza
   function agregarCarrito(parametro){
      const producto = productos.find(el => el.id === parametro);
      let div = document.createElement("div");
@@ -82,6 +89,7 @@ let container3 = document.getElementById("container3");
   carritoDom.append(div)
 }
 
+//funcion elimina, elimina uno a uno los prouctos del carrito
 function eliminar(idEliminar){
   const eliminar = document.getElementById(`carrito-${idEliminar}`);
   eliminar.remove();
