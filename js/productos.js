@@ -55,8 +55,7 @@ let container3 = document.getElementById("container3");
   //funcion comprar con una alert
   function comprar(){
     alert("Su compra se completo")
-    
-  }
+    }
 
   //Variable
   let carritoDom = document.getElementById("carrito");
@@ -89,7 +88,7 @@ let container3 = document.getElementById("container3");
   carritoDom.append(div)
 }
 
-//funcion elimina, elimina uno a uno los prouctos del carrito
+ //funcion elimina, elimina uno a uno los prouctos del carrito
 function eliminar(idEliminar){
   const eliminar = document.getElementById(`carrito-${idEliminar}`);
   eliminar.remove();
@@ -98,6 +97,7 @@ function eliminar(idEliminar){
       total.innerHTML = total.innerHTML*1 - producto.precio
   numeroCarrito.innerHTML = carrito.length 
 }
+
 
 
   
