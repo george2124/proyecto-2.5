@@ -25,7 +25,7 @@ const productos = [];
 productos.push(new Producto(1,"Mancuernas", 6500, "../imag/descarga, mancuernas.jpg"));
 productos.push(new Producto(2,"Pesas Rusas", 9000,"../imag/pesas rusas.jpg"));
 productos.push(new Producto(3,"Guantes", 3500, "../imag/guantes.jpg"));
-productos.push(new Producto(4,"Conjunto Depontiv Hombre", 10000, "../imag/conjunto.jpg"));
+productos.push(new Producto(4,"Conjunto Depontivo Hombre", 10000, "../imag/conjunto.jpg"));
 productos.push(new Producto(5,"Conjunto Depontivo Mujer", 12500, "../imag/conjunto de mujer2.jpg"));
 productos.push(new Producto(6,"Botella De Agua", 4500, "../imag/bottella dde agua (1).jpg"));
 
@@ -54,8 +54,14 @@ let container3 = document.getElementById("container3");
   
   //funcion comprar con una alert
   function comprar(){
+     carrito.length >= 1 ? terminarCompra() : alert("Carrito Vacio")  
+   
+  }
+  
+  function terminarCompra(){
     alert("Su compra se completo")
-    }
+    vaciar()
+  }
 
   //Variable
   let carritoDom = document.getElementById("carrito");
@@ -64,13 +70,17 @@ let container3 = document.getElementById("container3");
   
   //Funcion de vaciar carrito
   function vaciar(){
+    numeroCarrito.innerHTML = "0"
     total.innerHTML = "0"
     carritoDom.innerHTML = ""
+    localStorage.removeItem("carritoLocal")
+    carrito = [];
   }
   //Trae los pructos de localStorage 
   carrito = JSON.parse(localStorage.getItem("carritoLocal")) || [];
-
-  //Agrega los prouctos al carrito y los renderiza
+  recargarPagina()
+  
+  //Agrega los productos al carrito y los renderiza
   function agregarCarrito(parametro){
      const producto = productos.find(el => el.id === parametro);
      let div = document.createElement("div");
@@ -82,7 +92,8 @@ let container3 = document.getElementById("container3");
                 <p>$${producto.precio}</p>
                 <button class="btn-card" onclick = "eliminar(${producto.id})">Eliminar</button>`;
     
-     total.innerHTML = total.innerHTML*1 + producto.precio      
+     total.innerHTML = total.innerHTML*1 + producto.precio   
+     numeroCarrito.innerHTML = numeroCarrito.innerHTML*1 + 1 
      carrito.push(producto)     
      localStorage.setItem("carritoLocal", JSON.stringify(carrito))
   carritoDom.append(div)
@@ -95,10 +106,27 @@ function eliminar(idEliminar){
   carrito = carrito.filter(el => el.id !== idEliminar)
       const producto = productos.find(el => el.id === idEliminar)
       total.innerHTML = total.innerHTML*1 - producto.precio
+      numeroCarrito.innerHTML = numeroCarrito.innerHTML*1 - 1
   numeroCarrito.innerHTML = carrito.length 
+  localStorage.setItem("carritoLocal", JSON.stringify(carrito))
 }
 
 
+function recargarPagina(){
+  for ( const producto of carrito ){
+    let div = document.createElement("div");
+     div.id = `carrito-${producto.id}`;
+     div.className = "carritostyle"
+     div.innerHTML = `
+                <p>Id: ${producto.id}</p>
+                <p>${producto.nombre}</p>
+                <p>$${producto.precio}</p>
+                <button class="btn-card" onclick = "eliminar(${producto.id})">Eliminar</button>`;
+  
+    carritoDom.append(div);
+  }
+  numeroCarrito.innerHTML = carrito.length
+}
 
   
 
