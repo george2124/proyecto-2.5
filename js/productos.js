@@ -54,12 +54,24 @@ let container3 = document.getElementById("container3");
   
   //funcion comprar con una alert
   function comprar(){
-     carrito.length >= 1 ? terminarCompra() : alert("Carrito Vacio")  
+     carrito.length >= 1 ? terminarCompra() : Swal.fire({
+                                                    icon: 'error',
+                                                    title: 'Oops...',
+                                                    text: 'El Carrito se encuentra vacio!',
+                                                    footer: '<a href="">Verifique su compra!!</a>'
+    })  
    
   }
   
   function terminarCompra(){
-    alert("Su compra se completo")
+    // alert("Su compra se completo")
+    Swal.fire({
+      position: 'top-end',
+      icon: 'success',
+      title: 'Su compra se a concretado',
+      showConfirmButton: false,
+      timer: 2000
+    })
     vaciar()
   }
 
