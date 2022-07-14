@@ -1,0 +1,47 @@
+[
+    {
+        "id": 1,
+        "nombre": "Mancuernas", 
+        "precio": 6500,
+        "url": "../imag/descarga, mancuernas.jpg",
+        "vendido": false
+    },
+    
+    {
+        "id": 2,
+        "nombre": "Pesas Rusas",
+        "precio": 9000,
+        "url": "../imag/pesas rusas.jpg",
+        "vendido": false
+    },
+   
+    {
+        "id": 3,  
+        "nombre": "Guantes",
+        "precio": 3500,
+        "url": "../imag/guantes.jpg",
+        "vendido": false
+    },
+    {
+        "id": 4,   
+        "nombre": "Conjunto Depontivo Hombre",
+        "precio": 10000,
+        "url":  "../imag/conjunto.jpg",
+        "vendido": false
+    },
+    {
+        "id": 5,  
+        "nombre": "Conjunto Depontivo Mujer",
+        "precio": 12500, 
+        "url": "../imag/conjunto de mujer2.jpg",
+        "vendido": false
+    },
+    {
+        "id": 6,  
+        "nombre": "Botella De Agua",
+        "precio":  4500, 
+        "url": "../imag/bottella dde agua (1).jpg",
+        "vendido": false
+    }
+    
+]

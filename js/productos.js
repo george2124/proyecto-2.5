@@ -18,21 +18,31 @@ class Producto{
     }
 }
 
+
+
 //Array de productos con push
 
 const productos = [];
 
-productos.push(new Producto(1,"Mancuernas", 6500, "../imag/descarga, mancuernas.jpg"));
-productos.push(new Producto(2,"Pesas Rusas", 9000,"../imag/pesas rusas.jpg"));
-productos.push(new Producto(3,"Guantes", 3500, "../imag/guantes.jpg"));
-productos.push(new Producto(4,"Conjunto Depontivo Hombre", 10000, "../imag/conjunto.jpg"));
-productos.push(new Producto(5,"Conjunto Depontivo Mujer", 12500, "../imag/conjunto de mujer2.jpg"));
-productos.push(new Producto(6,"Botella De Agua", 4500, "../imag/bottella dde agua (1).jpg"));
+const cargarProducto = async () =>  {
+  const resp = await fetch("../assets/productos.json")
+
+  const datos = await resp.json()
+  console.log(datos);
+  datos.forEach(element => {
+    productos.push(new Producto(element.id, element.nombre, element.precio, element.url))
+
+    });
+    renderiza()
+}
+
 
 //Variable
 let container3 = document.getElementById("container3");
 
 //for of para sumar iva y agregar al dom
+const renderiza = async () => {
+
   for(const producto of productos){
     producto.sumaIva();
     producto.vender();
@@ -47,6 +57,7 @@ let container3 = document.getElementById("container3");
                      <button class="btn-card" onclick="agregarCarrito(${producto.id})">Agregar a Carrito</button>`;    
     container3.append(div); 
   }
+  }
   
   //variable
   let carrito = [];
@@ -57,7 +68,7 @@ let container3 = document.getElementById("container3");
      carrito.length >= 1 ? terminarCompra() : Swal.fire({
                                                     icon: 'error',
                                                     title: 'Oops...',
-                                                    text: 'El Carrito se encuentra vacio!',
+                                                    text: 'El Carrito se encuentra vacío!',
                                                     footer: '<a href="">Verifique su compra!!</a>'
     })  
    
@@ -140,6 +151,7 @@ function recargarPagina(){
   numeroCarrito.innerHTML = carrito.length
 }
 
+  cargarProducto()
   
 
   
