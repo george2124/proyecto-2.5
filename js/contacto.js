@@ -1,13 +1,8 @@
 //formulario
-let miformulario = document.getElementById("formulario");
-miformulario.addEventListener("submit", validarformulario);
+let miformulario = document.getElementById("formularioId");
+miformulario.addEventListener("submit", enviarformulario);
 
-function validarformulario(e){
+function enviarformulario(e){
     e.preventDefault();
-    let formulario = e.target
-    console.log(formulario.children[0].value);
-    console.log(formulario.children[1].value);
-    formulario.children[1].value = "";
-   
- 
+    alert("SUS DATOS SE ENVIARON CON EXITO");
 }

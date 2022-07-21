@@ -7,16 +7,13 @@ class Producto{
         this.precio  = precio;
         //this.precio  = parseFloat(precio);
         this.url = url;
-        this.vendido = false;
+       
     }
     
     sumaIva()  {
         this.precio *= 1.21;
     }
-    vender() {
-        this.vendido = true;
-    }
-}
+  }
 
 
 
@@ -45,7 +42,7 @@ const renderiza = async () => {
 
   for(const producto of productos){
     producto.sumaIva();
-    producto.vender();
+   
 
     let div = document.createElement("div");
     div.className = "card"
